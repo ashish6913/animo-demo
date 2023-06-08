@@ -28,6 +28,7 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'warn',
     '@typescript-eslint/consistent-type-imports': 'error',
     'import/no-cycle': 'error',
+    '@typescript-eslint/no-var-requires': 0,
     'import/order': [
       'error',
       {

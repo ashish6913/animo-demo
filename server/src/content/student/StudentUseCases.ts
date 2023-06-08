@@ -9,5 +9,5 @@ import { Noa } from './useCases/noa'
 
 export const StudentUseCases: CharWithUseCases = {
   characterId: Student.id,
-  useCases: [School,Noa,MorgageLoan,Club, Sport],
+  useCases: [Noa,MorgageLoan]
 }

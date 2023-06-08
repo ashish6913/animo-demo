@@ -22,16 +22,14 @@ export const BusinessWoman: Character = {
         { name: 'Nationality', value: 'United States of America' },
       ],
     },
+    //Removing the Credit card as CRA does not issue Credit Cards
     {
       id: uuid(),
-      name: 'Credit card',
+      name: 'Business Card',
       icon: '/public/businesswoman/icon-creditcard.png',
       attributes: [
-        { name: 'Issuer', value: 'qBank New York' },
-        { name: 'Holder', value: 'Joyce Brown' },
-        { name: 'Card number', value: '4537-6696-0666-0146' },
-        { name: 'Security code', value: '063' },
-        { name: 'Valid until', value: '20250315' },
+        { name: 'Company Name', value: 'ABC Corporation Limited' },
+        { name: 'Business Number', value: '123456789' },
       ],
     },
   ],

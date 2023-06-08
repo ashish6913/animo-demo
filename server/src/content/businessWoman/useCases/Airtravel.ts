@@ -57,12 +57,12 @@ export const AirTravel: UseCase = {
           icon: `/public/businesswoman/icon-businesswoman.svg`,
           properties: ['Name', 'Date of birth', 'Nationality'],
         },
-        {
-          id: uuid(),
-          name: 'Credit card',
-          icon: `/public/businesswoman/icon-creditcard.png`,
-          properties: ['Security code', 'Card number', 'Valid until'],
-        },
+        // {
+        //   id: uuid(),
+        //   name: 'Credit card',
+        //   icon: `/public/businesswoman/icon-creditcard.png`,
+        //   properties: ['Security code', 'Card number', 'Valid until'],
+        // },
       ],
       issueCredentials: [
         {

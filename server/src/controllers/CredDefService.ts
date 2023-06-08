@@ -42,6 +42,7 @@ export class CredDefService {
 
   // TODO: these should be auto-created based on the use cases.
   private async init() {
+  // Credential Definition for CRA ID Card
     const cd1 = await this.createSchemaCredentialDefinition({
       schema: {
         attributeNames: ['Name', 'Street', 'City', 'Date of birth', 'Nationality'],
@@ -53,16 +54,50 @@ export class CredDefService {
         tag: 'CRA ID Card',
       },
     })
-
+// Credential Definition for Business Card
     const cd2 = this.createSchemaCredentialDefinition({
       schema: {
-        name: 'Credit card',
-        version: '1.0.0',
-        attributeNames: ['Security code', 'Card number', 'Issuer', 'Holder', 'Valid until'],
+        name: 'Business Card',
+        version: '1.0.3',
+        attributeNames: ['Company Name', 'Business Number'],
       },
       credentialDefinition: {
         supportRevocation: false,
-        tag: 'Credit card',
+        tag: 'Business Card',
+      },
+    })
+// Credential Definition for Tax Compliance and Profitability Card
+    const cdTcp = this.createSchemaCredentialDefinition({
+      schema: {
+        name: 'Tax Compliance and Profitability Card',
+        version: '1.0.1',
+        attributeNames: ['Name', 'Date of birth', 'Company Name', 'Business Number', 'Tax Compliant', 'Total Profit'],
+      },
+      credentialDefinition: {
+        supportRevocation: false,
+        tag: 'Tax Compliance and Profitability Card',
+      },
+    })
+
+// Credential Definition for Government Grant
+    const cdGrant = this.createSchemaCredentialDefinition({
+      schema: {
+        name: 'Government Grant',
+        version: '1.0.0',
+        attributeNames: [
+        'Name', 
+        'Date of birth', 
+        'Company Name', 
+        'Business Number', 
+        'Tax Compliant', 
+        'Total Profit', 
+        'Grant Amount',
+        'Grant Committee'
+      ],
+      },
+      credentialDefinition: {
+        supportRevocation: false,
+        tag: 'Government Grant',
       },
     })
 
@@ -210,7 +245,7 @@ export class CredDefService {
       },
     })
 
-    this.credentialDefinitions = await Promise.all([cd1, cd2, cd3, cd4, cd5, cd6, cd7, cd8, cd9, cd10, cd11, cd12,cdNoa, cdLoan])
+    this.credentialDefinitions = await Promise.all([cd1, cd2, cd3, cd4, cd5, cd6, cd7, cd8, cd9, cd10, cd11, cd12, cdNoa, cdLoan, cdTcp, cdGrant])
   }
 
   private async createSchemaCredentialDefinition(options: {

@@ -6,10 +6,10 @@ import { StepType } from '../../types'
 
 const URL = '/public/student/useCases/noa'
 
-export const Noa: UseCase = {
-  slug: 'noa',
+export const TaxCompliance: UseCase = {
+  slug: 'profitable',
   card: {
-    title: 'Get your Notice of Assessment',
+    title: 'Get your Tax Compliance and Profitability Card',
     image: `${URL}/card-school.svg`,
     //Removing the description for more leaner look and feel.Original Description: Your notice of assessment (NOA) is an evaluation of your tax return that the Canada Revenue Agency sends you every year after you file your tax return.
     description: ``
@@ -32,7 +32,7 @@ export const Noa: UseCase = {
     },
     {
       id: uuid(),
-      name: 'Receive your student pass',
+      name: 'Receive your Tax Compliance and Profitability Card',
       description: 'Accept your new noa credential that is issued by the CRA.',
       steps: 7,
       section: 1,
@@ -58,18 +58,21 @@ export const Noa: UseCase = {
           icon: '/public/student/icon-student.svg',
           properties: ['Name', 'Date of birth'],
         },
+        {
+            id: uuid(),
+            name: 'Business Card',
+            icon: '/public/student/icon-student.svg',
+            properties: ['Company Name', 'Business Number'],
+          },
       ],
       issueCredentials: [
         {
           id: uuid(),
-          name: 'NOA Card',
-          properties: [{ name: 'Name' }, { name: 'Date of birth' }],
+          name: 'Tax Compliance and Profitability Card',
+          properties: [{ name: 'Name' }, { name: 'Date of birth' }, {name: 'Company Name' }, { name: 'Business Number' }],
           attributes: [
-            { name: 'Corporation', value: 'Canada Revenue Agency' },
-            { name: 'Faculty', value: 'Administration' },
-            { name: 'Sin', value: '123456789' },
-            { name: 'Date Issued', value: '20230331' },
-            { name: 'Net Income', value: '50000' },
+            { name: 'Tax Compliant', value: 'Yes' },
+            { name: 'Total Profit', value: '300000' },
           ],
           icon: `${URL}/icon-university-card.png`,
         },
@@ -79,8 +82,8 @@ export const Noa: UseCase = {
           id: uuid(),
           type: StepType.START,
           image: `${URL}/card-school.svg`,
-          title: 'Get your Notice of Assessment(NOA).',
-          description: `Few clicks away to get your NOA`,
+          title: 'Get your Tax Compliance and Profitability Card.',
+          description: `Few clicks away to verify your Tax Compliance status `,
         },
         {
           id: uuid(),
@@ -92,7 +95,7 @@ export const Noa: UseCase = {
           id: uuid(),
           type: StepType.INFO,
           title: 'You now have a secure connection.',
-          description: `Using this connection, you are going to share some personal information that is needed to complete the application.`,
+          description: `Using this connection, you are going to share some company information that is needed to complete the application.`,
           image: `${URL}/student-fill-out.svg`,
         },
         {
@@ -101,8 +104,8 @@ export const Noa: UseCase = {
           title: 'The agency wants some information.',
           description: `Grab your wallet, you've received a request for some information! To finish the application process, share the information by accepting the request. `,
           requestOptions: {
-            name: 'Notice of Assessment Request',
-            comment: 'The CRA would like some of your personal information.',
+            name: 'Tax Compliance and Profitability Request',
+            comment: 'The CRA would like some of your bussiness information.',
           },
         },
         {
@@ -116,17 +119,17 @@ export const Noa: UseCase = {
           id: uuid(),
           type: StepType.INFO,
           title: 'You got in!',
-          description: `Congrats! The agency has verified your credentials. Now the agency will issue you a NOA credential which can be used to prove your Net Icome `,
+          description: `Congrats! The agency has verified your credentials. Now the agency will issue you a Compliance and Profitability credential which can be used to prove your Grant Eligibilty `,
           image: `${URL}/student-accepted.svg`,
         },
         {
           id: uuid(),
           type: StepType.CREDENTIAL,
-          title: `The agency issues you your NOA credential`,
-          description: `Open your wallet, and accept your new NOA credential. You can use to prove your income at various banks.`,
+          title: `The agency issues you your Tax Compliance and Profitability credential`,
+          description: `Open your wallet, and accept your new credential.`,
           requestOptions: {
-            name: 'Notice of Assessment',
-            comment: 'Here is your NOA credential.',
+            name: 'Tax Compliance and Profitability',
+            comment: 'Here is your TCP credential.',
           },
           useProof: true,
         },
@@ -151,7 +154,7 @@ export const Noa: UseCase = {
             {
               id: uuid(),
               title: 'You got in!',
-              description: `Your application was accepted and the agency issued you your NOA credential. This credential is now safely stored in your digital wallet.`,
+              description: `Your application was accepted and the agency issued you your TCP credential. This credential is now safely stored in your digital wallet.`,
               image: `${URL}/student-accepted.svg`,
             },
           ],

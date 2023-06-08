@@ -11,7 +11,8 @@ export const MorgageLoan: UseCase = {
   card: {
     title: 'Get a morgage loan approved',
     image: `${URL}/card-school.svg`,
-    description: `Taxpayers might be eligible to a get a morgage loan approved from a bank. Let's use CRA's NOA credential to get a loan`
+    //Original Description: Taxpayers might be eligible to a get a morgage loan approved from a bank. Let's use CRA's NOA credential to get a loan
+    description: ``
   },
 
   stepper: [
