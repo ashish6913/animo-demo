@@ -44,7 +44,7 @@ export const GovernmentGrant: UseCase = {
       id: uuid(),
       entity: {
         name: 'Government Committee',
-        icon: `/home/vmadmin/dev/animo-demo/server/src/public/animo-logo.png`,
+        icon: `/public/animo-logo.png`,
         imageUrl: 'https://i.imgur.com/KPrshWf.png',
       },
       colors: {

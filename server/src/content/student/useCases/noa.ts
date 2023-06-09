@@ -32,7 +32,7 @@ export const Noa: UseCase = {
     },
     {
       id: uuid(),
-      name: 'Receive your student pass',
+      name: 'Receive your NOA card',
       description: 'Accept your new noa credential that is issued by the CRA.',
       steps: 7,
       section: 1,
@@ -44,7 +44,7 @@ export const Noa: UseCase = {
       id: uuid(),
       entity: {
         name: 'CRA',
-        icon: `/home/vmadmin/dev/animo-demo/server/src/public/animo-logo.png`,
+        icon: `/public/animo-logo.png`,
         imageUrl: 'https://i.imgur.com/KPrshWf.png',
       },
       colors: {

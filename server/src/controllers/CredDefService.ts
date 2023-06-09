@@ -164,8 +164,8 @@ export class CredDefService {
     const cdLoan = this.createSchemaCredentialDefinition({
       schema: {
         name: "Morgage Loan",
-        version: '1.0.2',
-        attributeNames: ['Name','Date of birth','Sin','Net Income','Corporation','Approved Loan Amount'],
+        version: '1.0.3',
+        attributeNames: ['Name','Date of birth','Sin','Corporation','Approved Loan Amount'],
       },
       credentialDefinition: {
         supportRevocation: false,

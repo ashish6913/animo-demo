@@ -56,14 +56,15 @@ export const MorgageLoan: UseCase = {
           id: uuid(),
           name: 'NOA Card',
           icon: '/public/student/icon-student.svg',
-          properties: ['Name','Date of birth','Sin','Net Income'],
+          properties: ['Name','Date of birth','Sin'],
+          predicates: { name: 'Net Income', value: 40000, type: '>=' }
         },
       ],
       issueCredentials: [
         {
           id: uuid(),
           name: 'Morgage Loan',
-          properties: [{ name: 'Name' },{ name: 'Date of birth' },{ name: 'Sin' },{ name: 'Net Income' }],
+          properties: [{ name: 'Name' },{ name: 'Date of birth' },{ name: 'Sin' }],
           attributes: [
             { name: 'Corporation', value:'ABC Bank'},
             { name: 'Approved Loan Amount', value: '200000' },
