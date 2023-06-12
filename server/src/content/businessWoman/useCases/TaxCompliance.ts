@@ -4,14 +4,14 @@ import { v4 as uuid } from 'uuid'
 
 import { StepType } from '../../types'
 
-const URL = '/public/student/useCases/noa'
+const URL = '/public/businesswoman/useCases/taxCompliance'
 
 export const TaxCompliance: UseCase = {
   slug: 'profitable',
   card: {
-    title: 'Get your Tax Compliance and Profitability Card',
-    image: `${URL}/card-school.svg`,
-    //Removing the description for more leaner look and feel.Original Description: Your notice of assessment (NOA) is an evaluation of your tax return that the Canada Revenue Agency sends you every year after you file your tax return.
+    title: 'Get your Tax Compliance Certificate',
+    image: `${URL}/Discussion-amico(1).svg`,
+    //Removing the description for more leaner look and feel.
     description: ``
   },
 
@@ -32,7 +32,7 @@ export const TaxCompliance: UseCase = {
     },
     {
       id: uuid(),
-      name: 'Receive your Tax Compliance and Profitability Card',
+      name: 'Receive your Tax Compliance Certificate',
       description: 'Accept your new noa credential that is issued by the CRA.',
       steps: 7,
       section: 1,
@@ -44,8 +44,8 @@ export const TaxCompliance: UseCase = {
       id: uuid(),
       entity: {
         name: 'CRA',
-        icon: `/public/animo-logo.png`,
-        imageUrl: 'https://i.imgur.com/KPrshWf.png',
+        icon: `/public/cra-logo4.png`,
+        imageUrl: 'https://lespromenades.com/wp-content/uploads/2021/09/0822cab22c9104aa8468e7985463d1fa9ab2f1eb-1.png',
       },
       colors: {
         primary: '#4686C6',
@@ -55,26 +55,26 @@ export const TaxCompliance: UseCase = {
         {
           id: uuid(),
           name: 'CRA ID Card',
-          icon: '/public/student/icon-student.svg',
+          icon: `/public/businesswoman/reshot-icon-id-card-X5AFGW4HQ6.svg`,
           properties: ['Name', 'Date of birth'],
         },
         {
             id: uuid(),
             name: 'Business Card',
-            icon: '/public/student/icon-student.svg',
+            icon: `/public/businesswoman/icon-creditcard.png`,
             properties: ['Company Name', 'Business Number'],
           },
       ],
       issueCredentials: [
         {
           id: uuid(),
-          name: 'Tax Compliance and Profitability Card',
+          name: 'Tax Compliance Certificate',
           properties: [{ name: 'Name' }, { name: 'Date of birth' }, {name: 'Company Name' }, { name: 'Business Number' }],
           attributes: [
             { name: 'Tax Compliant', value: 'Yes' },
             { name: 'Total Profit', value: '300000' },
           ],
-          icon: `${URL}/icon-university-card.png`,
+          icon: `${URL}/tax-cert.svg`,
         },
       ],
       steps: [
@@ -82,7 +82,7 @@ export const TaxCompliance: UseCase = {
           id: uuid(),
           type: StepType.START,
           image: `${URL}/card-school.svg`,
-          title: 'Get your Tax Compliance and Profitability Card.',
+          title: 'Get your Tax Compliance Certificate',
           description: `Few clicks away to verify your Tax Compliance status `,
         },
         {
@@ -104,7 +104,7 @@ export const TaxCompliance: UseCase = {
           title: 'The agency wants some information.',
           description: `Grab your wallet, you've received a request for some information! To finish the application process, share the information by accepting the request. `,
           requestOptions: {
-            name: 'Tax Compliance and Profitability Request',
+            name: 'Tax Compliance Request',
             comment: 'The CRA would like some of your bussiness information.',
           },
         },
@@ -119,16 +119,16 @@ export const TaxCompliance: UseCase = {
           id: uuid(),
           type: StepType.INFO,
           title: 'You got in!',
-          description: `Congrats! The agency has verified your credentials. Now the agency will issue you a Compliance and Profitability credential which can be used to prove your Grant Eligibilty `,
+          description: `Congrats! The agency has verified your credentials. Now the agency will issue you a Compliance Certificate which can be used to prove your Grant Eligibilty `,
           image: `${URL}/student-accepted.svg`,
         },
         {
           id: uuid(),
           type: StepType.CREDENTIAL,
-          title: `The agency issues you your Tax Compliance and Profitability credential`,
+          title: `The agency issues you your Tax Compliance Certificate`,
           description: `Open your wallet, and accept your new credential.`,
           requestOptions: {
-            name: 'Tax Compliance and Profitability',
+            name: 'Tax Compliance Certificate',
             comment: 'Here is your TCP credential.',
           },
           useProof: true,
@@ -154,7 +154,7 @@ export const TaxCompliance: UseCase = {
             {
               id: uuid(),
               title: 'You got in!',
-              description: `Your application was accepted and the agency issued you your TCP credential. This credential is now safely stored in your digital wallet.`,
+              description: `Your application was accepted and the agency issued you your Tax Compliance Certificate. This credential is now safely stored in your digital wallet.`,
               image: `${URL}/student-accepted.svg`,
             },
           ],

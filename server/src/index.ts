@@ -59,7 +59,7 @@ const run = async () => {
     autoAcceptCredentials: AutoAcceptCredential.ContentApproved,
     autoAcceptProofs: AutoAcceptProof.ContentApproved,
     useLegacyDidSovPrefix: true,
-    connectionImageUrl: 'https://i.imgur.com/g3abcCO.png',
+    connectionImageUrl: 'https://lespromenades.com/wp-content/uploads/2021/09/0822cab22c9104aa8468e7985463d1fa9ab2f1eb-1.png'
   }
 
   const agent = new Agent(agentConfig, agentDependencies)

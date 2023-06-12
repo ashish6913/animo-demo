@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid'
 
 export const BusinessWoman: Character = {
   id: '2',
-  image: '/public/businesswoman/businesswoman.svg',
+  image: '/public/businesswoman/building.svg',
   name: 'Joyce',
   type: 'Businesswoman',
   backstory:
@@ -13,7 +13,7 @@ export const BusinessWoman: Character = {
     {
       id: uuid(),
       name: 'CRA ID Card',
-      icon: '/public/businesswoman/icon-businesswoman.svg',
+      icon: '/public/businesswoman/reshot-icon-id-card-X5AFGW4HQ6.svg',
       attributes: [
         { name: 'Name', value: 'Joyce Brown' },
         { name: 'Date of birth', value: '19910104' },

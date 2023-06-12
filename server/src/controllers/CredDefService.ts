@@ -69,13 +69,13 @@ export class CredDefService {
 // Credential Definition for Tax Compliance and Profitability Card
     const cdTcp = this.createSchemaCredentialDefinition({
       schema: {
-        name: 'Tax Compliance and Profitability Card',
+        name: 'Tax Compliance Certificate',
         version: '1.0.1',
         attributeNames: ['Name', 'Date of birth', 'Company Name', 'Business Number', 'Tax Compliant', 'Total Profit'],
       },
       credentialDefinition: {
         supportRevocation: false,
-        tag: 'Tax Compliance and Profitability Card',
+        tag: 'Tax Compliance Certificate',
       },
     })
 
