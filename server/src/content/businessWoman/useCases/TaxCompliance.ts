@@ -81,7 +81,7 @@ export const TaxCompliance: UseCase = {
         {
           id: uuid(),
           type: StepType.START,
-          image: `${URL}/card-school.svg`,
+          image: `${URL}/Discussion-amico(1).svg`,
           title: 'Get your Tax Compliance Certificate',
           description: `Few clicks away to verify your Tax Compliance status `,
         },
