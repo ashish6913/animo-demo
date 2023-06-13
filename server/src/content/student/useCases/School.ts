@@ -31,7 +31,7 @@ export const School: UseCase = {
     },
     {
       id: uuid(),
-      name: 'Receive your student pass',
+      name: 'Receive your NOA card',
       description: 'Accept your new Student pass that is issued by the University.',
       steps: 7,
       section: 1,

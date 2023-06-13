@@ -4,13 +4,13 @@ import { v4 as uuid } from 'uuid'
 
 import { StepType } from '../../types'
 
-const URL = '/public/student/useCases/noa'
+const URL = '/public/businesswoman/useCases/grant'
 
 export const GovernmentGrant: UseCase = {
   slug: 'grant',
   card: {
     title: 'Apply for Government Grant',
-    image: `${URL}/card-school.svg`,
+    image: `${URL}/investment-data-amico.svg`,
     //Removing the description for more leaner look and feel.Original Description: Your notice of assessment (NOA) is an evaluation of your tax return that the Canada Revenue Agency sends you every year after you file your tax return.
     description: ``
   },
@@ -44,8 +44,8 @@ export const GovernmentGrant: UseCase = {
       id: uuid(),
       entity: {
         name: 'Government Committee',
-        icon: `/home/vmadmin/dev/animo-demo/server/src/public/animo-logo.png`,
-        imageUrl: 'https://i.imgur.com/KPrshWf.png',
+        icon: `${URL}/flag.png`,
+        imageUrl: 'https://img.freepik.com/free-icon/canada_318-297359.jpg',
       },
       colors: {
         primary: '#4686C6',
@@ -54,14 +54,14 @@ export const GovernmentGrant: UseCase = {
       requestedCredentials: [
         {
           id: uuid(),
-          name: 'Tax Compliance and Profitability Card',
-          icon: '/public/student/icon-student.svg',
+          name: 'Tax Compliance Certificate',
+          icon: `${URL}/tax-cert.svg`,
           properties: ['Name', 'Date of birth','Tax Compliant','Total Profit'],
         },
         {
             id: uuid(),
             name: 'Business Card',
-            icon: '/public/student/icon-student.svg',
+            icon: `${URL}/icon-creditcard.png`,
             properties: ['Company Name', 'Business Number'],
           },
       ],
@@ -81,7 +81,7 @@ export const GovernmentGrant: UseCase = {
             { name: 'Grant Amount', value: '100000' },
             { name: 'Grant Committee', value: 'XYZ Committee' },
           ],
-          icon: `${URL}/icon-university-card.png`,
+          icon: `${URL}/investment-data-amico.svg`,
         },
       ],
       steps: [
@@ -89,8 +89,8 @@ export const GovernmentGrant: UseCase = {
           id: uuid(),
           type: StepType.START,
           image: `${URL}/card-school.svg`,
-          title: 'Get your Tax Compliance and Profitability Card.',
-          description: `Few clicks away to verify your Tax Compliance status `,
+          title: 'Get your Government Grant',
+          description: `Few clicks away to acquire a government grant `,
         },
         {
           id: uuid(),

@@ -9,5 +9,5 @@ import { TaxCompliance } from './useCases/TaxCompliance'
 
 export const BusinessWomanUseCases: CharWithUseCases = {
   characterId: BusinessWoman.id,
-  useCases: [TaxCompliance,GovernmentGrant,Conference, Hotel, AirTravel],
+  useCases: [TaxCompliance,GovernmentGrant],
 }
