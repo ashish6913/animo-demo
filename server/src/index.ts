@@ -37,7 +37,7 @@ process.on('unhandledRejection', (error) => {
 const run = async () => {
   const endpoint = process.env.AGENT_ENDPOINT ?? (await connect({
     addr: 5001,
-    authtoken: '2QZFaJGOLEMI9CzF7RunVQawOLm_6r6dUCBhDm2obLtxVTBaK'
+    authtoken: '1mdXuzNL2LsrDAX6nJprQPLc2VJ_5LARmZLWkomGf38G51jY5'
   }))
   const agentConfig: InitConfig = {
     label: 'CRA',
