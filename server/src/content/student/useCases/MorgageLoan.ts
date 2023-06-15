@@ -43,7 +43,7 @@ export const MorgageLoan: UseCase = {
     {
       id: uuid(),
       entity: {
-        name: 'ABC Bank',
+        name: 'Piggy Bank & Trust',
         icon: `${URL}/logo-university.png`,
         imageUrl: 'https://i.imgur.com/KPrshWf.png',
       },
@@ -66,7 +66,7 @@ export const MorgageLoan: UseCase = {
           name: 'Morgage Loan',
           properties: [{ name: 'Name' },{ name: 'Date of birth' },{ name: 'Sin' }],
           attributes: [
-            { name: 'Corporation', value:'ABC Bank'},
+            { name: 'Corporation', value:'Piggy Bank & Trust'},
             { name: 'Approved Loan Amount', value: '200000' },
           ],
           icon: `${URL}/icon-university-card.png`,
