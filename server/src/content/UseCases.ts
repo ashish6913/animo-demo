@@ -1,8 +1,8 @@
 import type { CharWithUseCases } from './types'
 
-import { BusinessWomanUseCases } from './businessWoman/BusinesswomanUseCases'
-import { StudentUseCases } from './student/StudentUseCases'
+import { CorporationUseCases } from './corporation/CorporationUseCases'
+import { CitizenUseCases } from './citizen/CitizenUseCases'
 
-const useCases: CharWithUseCases[] = [StudentUseCases, BusinessWomanUseCases,]
+const useCases: CharWithUseCases[] = [CitizenUseCases, CorporationUseCases,]
 
 export default useCases

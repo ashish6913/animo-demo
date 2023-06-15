@@ -2,18 +2,18 @@ import type { Character } from '../types'
 
 import { v4 as uuid } from 'uuid'
 
-export const Student: Character = {
+export const Citizen: Character = {
   id: '1',
-  image: '/public/student/student.svg',
+  image: '/public/citizen/citizen.svg',
   name: 'Jan',
-  type: 'Student',
+  type: 'Citizen',
   backstory:
-    'Jan is feeling great! He just got into law school and is ready to experience everything that student life has to offer. Help him navigate the experience!',
-  starterCredentials: [
+    "Jan is an ordinary individual leading a typical life as a regular taxpayer in the Canada Revenue Agency (CRA). Take a look at a typical day in Jan's life.",
+    starterCredentials: [
     {
       id: uuid(),
       name: 'CRA ID Card',
-      icon: '/public/cra-id.svg',
+      icon: '/public/student/icon-student.svg',
       attributes: [
         { name: 'Name', value: 'Jan van Dalen' },
         { name: 'Date of birth', value: '101' },

@@ -1,8 +1,8 @@
 import type { Character } from './types'
 
-import { BusinessWoman } from './businessWoman/BusinessWoman'
-import { Student } from './student/Student'
+import { Corporation } from './corporation/Corporation'
+import { Citizen } from './citizen/Citizen'
 
-const characters: Character[] = [Student, BusinessWoman]
+const characters: Character[] = [Citizen, Corporation]
 
 export default characters
