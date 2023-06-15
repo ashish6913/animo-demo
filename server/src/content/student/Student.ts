@@ -16,8 +16,8 @@ export const Student: Character = {
       icon: '/public/cra-id.svg',
       attributes: [
         { name: 'Name', value: 'Jan van Dalen' },
-        { name: 'Date of birth', value: '101' },
-        { name: 'Street', value: 'Ambachtstraat 61' },
+        { name: 'Date of birth', value: '19950210' },
+        { name: 'Street', value: '875 Heron Road' },
         { name: 'City', value: 'Ottawa' },
         { name: 'Nationality', value: 'Canada' },
       ],
