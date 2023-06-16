@@ -20,7 +20,7 @@ import onboardingCompletedLight from '../assets/light/onboarding-completed-light
 import onboardingConnectLight from '../assets/light/onboarding-connect-light.svg'
 import onboardingCredentialLight from '../assets/light/onboarding-credential-light.svg'
 import onboardingSecureLight from '../assets/light/onboarding-secure-light.svg'
-import onboardingStartLight from '../assets/light/onboarding-started-light.svg'
+import onboardingStartLight from '../assets/light/onboarding-started-light.png'
 import onboardingWalletLight from '../assets/light/onboarding-wallet-light.svg'
 
 export enum Progress {
@@ -58,7 +58,7 @@ export const OnboardingContent = {
     iconLight: onboardingStartLight,
     iconDark: onboardingStartDark,
     title: 'Let’s get you set up!',
-    text: `In the next few minutes, you will experience the power of owning your own data. Using your actual phone, you will work with verifiable credentials: digital, authentic certificates that prove stuff. Don’t worry, we’ll explain it later. Let’s get you set up!`,
+    text: `In the next few minutes, you will experience the power of owning your own data in CRA. Using your actual phone, you will work with verifiable credentials: digital, authentic certificates that prove stuff. Don’t worry, we’ll explain it later. Let’s get you set up!`,
   },
   [Progress.CHOOSE_WALLET]: {
     iconLight: onboardingWalletLight,
