@@ -13,7 +13,7 @@ export const Citizen: Character = {
     {
       id: uuid(),
       name: 'CRA ID Card',
-      icon: '/public/student/icon-student.svg',
+      icon: '/public/citizen/citizen.svg',
       attributes: [
         { name: 'Name', value: 'Jan van Dalen' },
         { name: 'Date of birth', value: '19950210' },

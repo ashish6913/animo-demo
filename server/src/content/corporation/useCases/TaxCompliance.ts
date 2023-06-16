@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid'
 
 import { StepType } from '../../types'
 
-const URL = '/public/businesswoman/useCases/taxCompliance'
+const URL = '/public/corporation/useCases/taxCompliance'
 
 export const TaxCompliance: UseCase = {
   slug: 'profitable',
@@ -81,7 +81,7 @@ export const TaxCompliance: UseCase = {
         {
           id: uuid(),
           type: StepType.START,
-          image: `${URL}/card-school.svg`,
+          image: `${URL}/Discussion-amico(1).svg`,
           title: 'Get your Tax Compliance Certificate',
           description: `Few clicks away to verify your Tax Compliance status `,
         },
