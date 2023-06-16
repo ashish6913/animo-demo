@@ -4,13 +4,13 @@ import { v4 as uuid } from 'uuid'
 
 import { StepType } from '../../types'
 
-const URL = '/public/student/useCases/noa'
+const URL = '/public/citizen/useCases/morgage'
 
 export const MorgageLoan: UseCase = {
   slug: 'loan',
   card: {
     title: 'Get a morgage loan approved',
-    image: `${URL}/card-school.svg`,
+    image: `${URL}/loan.svg`,
     //Original Description: Taxpayers might be eligible to a get a morgage loan approved from a bank. Let's use CRA's NOA credential to get a loan
     description: ``
   },
@@ -55,7 +55,7 @@ export const MorgageLoan: UseCase = {
         {
           id: uuid(),
           name: 'NOA Card',
-          icon: '/public/student/icon-student.svg',
+          icon: `${URL}/noa-icon.svg`,
           properties: ['Name','Date of birth','Sin'],
           predicates: { name: 'Net Income', value: 40000, type: '>=' }
         },
@@ -76,7 +76,7 @@ export const MorgageLoan: UseCase = {
         {
           id: uuid(),
           type: StepType.START,
-          image: `${URL}/card-school.svg`,
+          image: `${URL}/loan.svg`,
           title: 'Get your Morgage Loan Approval.',
           description: `Few clicks away to get your Loan approved`,
         },

@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid'
 
 import { StepType } from '../../types'
 
-const URL = '/public/businesswoman/useCases/grant'
+const URL = '/public/corporation/useCases/grant'
 
 export const GovernmentGrant: UseCase = {
   slug: 'grant',
@@ -88,7 +88,7 @@ export const GovernmentGrant: UseCase = {
         {
           id: uuid(),
           type: StepType.START,
-          image: `${URL}/card-school.svg`,
+          image: `${URL}/investment-data-amico.svg`,
           title: 'Get your Government Grant',
           description: `Few clicks away to acquire a government grant `,
         },
