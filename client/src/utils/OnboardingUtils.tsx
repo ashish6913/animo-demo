@@ -69,8 +69,8 @@ export const OnboardingContent = {
   [Progress.PICK_CHARACTER]: {
     iconLight: onboardingChooseLight,
     iconDark: onboardingChooseDark,
-    title: 'Who do you want to be today?',
-    text: 'It’s time to pick your character. Every character has its own set of use cases, which explore the power of digital credentials. Don’t worry, you can change your character later.',
+    title: 'Use Cases',
+    text: "It’s time to pick your character. Each character has it's own usecase, which explore the power of digital credentials.",
   },
   [Progress.RECEIVE_IDENTITY]: {
     iconLight: onboardingConnectLight,

@@ -6,10 +6,10 @@ import { StepType } from '../../types'
 
 const URL = '/public/student/useCases/noa'
 
-export const GovernmentGrant: UseCase = {
-  slug: 'grant',
+export const Noa: UseCase = {
+  slug: 'noa',
   card: {
-    title: 'Apply for Government Grant',
+    title: 'Get your Notice of Assessment',
     image: `${URL}/card-school.svg`,
     //Removing the description for more leaner look and feel.Original Description: Your notice of assessment (NOA) is an evaluation of your tax return that the Canada Revenue Agency sends you every year after you file your tax return.
     description: ``
@@ -18,8 +18,8 @@ export const GovernmentGrant: UseCase = {
   stepper: [
     {
       id: uuid(),
-      name: `Connect with the Grant Committee`,
-      description: `Setup a secure connection with the committee.`,
+      name: `Connect with the CRA`,
+      description: `Setup a secure connection with the CRA.`,
       steps: 1,
       section: 1,
     },
@@ -32,8 +32,8 @@ export const GovernmentGrant: UseCase = {
     },
     {
       id: uuid(),
-      name: 'Receive your Government Grant',
-      description: 'Accept your new grant credential that is issued by the Grant Committee.',
+      name: 'Receive your NOA card',
+      description: 'Accept your new noa credential that is issued by the CRA.',
       steps: 7,
       section: 1,
     },
@@ -43,7 +43,7 @@ export const GovernmentGrant: UseCase = {
     {
       id: uuid(),
       entity: {
-        name: 'Government Committee',
+        name: 'CRA',
         icon: `/public/animo-logo.png`,
         imageUrl: 'https://i.imgur.com/KPrshWf.png',
       },
@@ -54,32 +54,22 @@ export const GovernmentGrant: UseCase = {
       requestedCredentials: [
         {
           id: uuid(),
-          name: 'Tax Compliance and Profitability Card',
+          name: 'CRA ID Card',
           icon: '/public/student/icon-student.svg',
-          properties: ['Name', 'Date of birth','Tax Compliant','Total Profit'],
+          properties: ['Name', 'Date of birth'],
         },
-        {
-            id: uuid(),
-            name: 'Business Card',
-            icon: '/public/student/icon-student.svg',
-            properties: ['Company Name', 'Business Number'],
-          },
       ],
       issueCredentials: [
         {
           id: uuid(),
-          name: 'Government Grant',
-          properties: [
-            { name: 'Name' }, 
-            { name: 'Date of birth' }, 
-            { name: 'Company Name' }, 
-            { name: 'Business Number' }, 
-            { name: 'Tax Compliant'}, 
-            { name: 'Total Profit'}
-        ],
+          name: 'NOA Card',
+          properties: [{ name: 'Name' }, { name: 'Date of birth' }],
           attributes: [
-            { name: 'Grant Amount', value: '100000' },
-            { name: 'Grant Committee', value: 'XYZ Committee' },
+            { name: 'Corporation', value: 'Canada Revenue Agency' },
+            { name: 'Faculty', value: 'Administration' },
+            { name: 'Sin', value: '123456789' },
+            { name: 'Date Issued', value: '20230331' },
+            { name: 'Net Income', value: '50000' },
           ],
           icon: `${URL}/icon-university-card.png`,
         },
@@ -89,8 +79,8 @@ export const GovernmentGrant: UseCase = {
           id: uuid(),
           type: StepType.START,
           image: `${URL}/card-school.svg`,
-          title: 'Get your Tax Compliance and Profitability Card.',
-          description: `Few clicks away to verify your Tax Compliance status `,
+          title: 'Get your Notice of Assessment(NOA).',
+          description: `Few clicks away to get your NOA`,
         },
         {
           id: uuid(),
@@ -102,7 +92,7 @@ export const GovernmentGrant: UseCase = {
           id: uuid(),
           type: StepType.INFO,
           title: 'You now have a secure connection.',
-          description: `Using this connection, you are going to share some company information that is needed to complete the application.`,
+          description: `Using this connection, you are going to share some personal information that is needed to complete the application.`,
           image: `${URL}/student-fill-out.svg`,
         },
         {
@@ -111,8 +101,8 @@ export const GovernmentGrant: UseCase = {
           title: 'The agency wants some information.',
           description: `Grab your wallet, you've received a request for some information! To finish the application process, share the information by accepting the request. `,
           requestOptions: {
-            name: 'Tax Compliance and Profitability Request',
-            comment: 'The CRA would like some of your bussiness information.',
+            name: 'Notice of Assessment Request',
+            comment: 'The CRA would like some of your personal information.',
           },
         },
         {
@@ -126,17 +116,17 @@ export const GovernmentGrant: UseCase = {
           id: uuid(),
           type: StepType.INFO,
           title: 'You got in!',
-          description: `Congrats! The agency has verified your credentials. Now the agency will issue you a Compliance and Profitability credential which can be used to prove your Grant Eligibilty `,
+          description: `Congrats! The agency has verified your credentials. Now the agency will issue you a NOA credential which can be used to prove your Net Icome `,
           image: `${URL}/student-accepted.svg`,
         },
         {
           id: uuid(),
           type: StepType.CREDENTIAL,
-          title: `The agency issues you your Tax Compliance and Profitability credential`,
-          description: `Open your wallet, and accept your new credential.`,
+          title: `The agency issues you your NOA credential`,
+          description: `Open your wallet, and accept your new NOA credential. You can use to prove your income at various banks.`,
           requestOptions: {
-            name: 'Tax Compliance and Profitability',
-            comment: 'Here is your TCP credential.',
+            name: 'Notice of Assessment',
+            comment: 'Here is your NOA credential.',
           },
           useProof: true,
         },
@@ -161,7 +151,7 @@ export const GovernmentGrant: UseCase = {
             {
               id: uuid(),
               title: 'You got in!',
-              description: `Your application was accepted and the agency issued you your TCP credential. This credential is now safely stored in your digital wallet.`,
+              description: `Your application was accepted and the agency issued you your NOA credential. This credential is now safely stored in your digital wallet.`,
               image: `${URL}/student-accepted.svg`,
             },
           ],

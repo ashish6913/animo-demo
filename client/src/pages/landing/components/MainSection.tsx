@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 import { FiExternalLink, FiArrowRight } from 'react-icons/fi'
+import { MdOutlineEmail } from 'react-icons/md'
 import { useMediaQuery } from 'react-responsive'
 import { useNavigate } from 'react-router-dom'
 
 import { buttonHover, fade, fadeDelay, landingTitle } from '../../../FramerAnimations'
-import homeIllustrationDark from '../../../assets/dark/animo-home-illustration-dark.svg'
-import homeIllustrationLight from '../../../assets/light/animo-home-illustration-light.svg'
+import homeIllustrationDark from '../../../assets/dark/cralogo.png'
+import homeIllustrationLight from '../../../assets/light/cralogo.png'
 import { useDarkMode } from '../../../hooks/useDarkMode'
 
 export const MainSection: React.FC = () => {
@@ -23,18 +24,17 @@ export const MainSection: React.FC = () => {
     <motion.div className="flex-1 dark:text-white text-left text-4xl font-semibold my-8 leading-snug ">
       <h1>
         <div className="overflow-hidden py-1">
-          <motion.p variants={landingTitle}>Decentralized </motion.p>
-          <motion.p variants={landingTitle}>identity is changing </motion.p>
+          <motion.p variants={landingTitle}>Self-Sovereign Identity </motion.p>
         </div>
         <div className="overflow-hidden py-1">
           <motion.span variants={fade} className="text-6xl text-animo-coral dark:text-animo-blue filter drop-shadow">
-            the future.
+            CRA Demo
           </motion.span>
         </div>
       </h1>
       <div className="overflow-hidden">
         <motion.h2 variants={fade} className="text-lg font-normal mt-6 dark:text-animo-lightgrey text-animo-darkgrey">
-          Experience a world where self-sovereign identity is the standard.
+          Explore your Canada Revenue Agency Digital ID.
         </motion.h2>
       </div>
       <div className="flex flex-col justify-center text-base sxl:text-lg font-normal mt-6 m-auto">
@@ -64,12 +64,11 @@ export const MainSection: React.FC = () => {
     <motion.div className="flex-1 text-left text-animo-black dark:text-animo-white font-semibold text-4xl lg:text-5xl xl:text-6xl m-auto">
       <h1>
         <div className="overflow-hidden py-1 leading-tight">
-          <motion.p variants={landingTitle}>Decentralized</motion.p>
+          <motion.p variants={landingTitle}>Self-Sovereign Identity</motion.p>
         </div>
         <div className="overflow-hidden py-1 leading-tight">
-          <motion.p variants={landingTitle}>identity is changing </motion.p>
           <motion.span variants={fade} className="text-animo-coral dark:text-animo-blue filter drop-shadow">
-            the future.
+            CRA Demo
           </motion.span>
         </div>
       </h1>
@@ -78,7 +77,7 @@ export const MainSection: React.FC = () => {
           variants={fadeDelay}
           className="text-base lg:text-lg font-normal mt-6 dark:text-animo-lightgrey text-animo-darkgrey"
         >
-          Experience a world where self-sovereign identity is the standard.
+          Explore your Canada Revenue Agency Digital ID.
         </motion.h2>
       </div>
       <div className="flex flex-row justify-start text-base sxl:text-lg  font-normal mt-6">
@@ -100,6 +99,16 @@ export const MainSection: React.FC = () => {
           >
             <p className="inline">Get to know us &nbsp;</p>
             <FiExternalLink className="inline h-6 pb-1" />
+          </motion.button>
+        </a>
+        <a href="mailto:innovation@cra-arc.gc.ca" target="_blank">
+          <motion.button
+            variants={fadeDelay}
+            whileHover={buttonHover}
+            className="bg-white dark:bg-black text-black dark:text-white py-3 px-5 ml-4 rounded-lg font-semibold shadow-sm dark:shadow-none select-none "
+          >
+            <p className="inline">Contact us &nbsp;</p>
+            <MdOutlineEmail className="inline h-6 pb-1" />
           </motion.button>
         </a>
       </div>

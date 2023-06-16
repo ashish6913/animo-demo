@@ -10,7 +10,7 @@ export const Noa: UseCase = {
   slug: 'noa',
   card: {
     title: 'Get your Notice of Assessment',
-    image: `${URL}/card-school.svg`,
+    image: `${URL}/tax-pana-animated.svg`,
     //Removing the description for more leaner look and feel.Original Description: Your notice of assessment (NOA) is an evaluation of your tax return that the Canada Revenue Agency sends you every year after you file your tax return.
     description: ``
   },
@@ -44,8 +44,8 @@ export const Noa: UseCase = {
       id: uuid(),
       entity: {
         name: 'CRA',
-        icon: `/public/animo-logo.png`,
-        imageUrl: 'https://i.imgur.com/KPrshWf.png',
+        icon: `/public/cra-logo4.png`,
+        imageUrl: 'https://lespromenades.com/wp-content/uploads/2021/09/0822cab22c9104aa8468e7985463d1fa9ab2f1eb-1.png',
       },
       colors: {
         primary: '#4686C6',
@@ -55,7 +55,7 @@ export const Noa: UseCase = {
         {
           id: uuid(),
           name: 'CRA ID Card',
-          icon: '/public/student/icon-student.svg',
+          icon: '/public/cra-id.svg',
           properties: ['Name', 'Date of birth'],
         },
       ],
@@ -71,14 +71,14 @@ export const Noa: UseCase = {
             { name: 'Date Issued', value: '20230331' },
             { name: 'Net Income', value: '50000' },
           ],
-          icon: `${URL}/icon-university-card.png`,
+          icon: `${URL}/noa_icon.svg`,
         },
       ],
       steps: [
         {
           id: uuid(),
           type: StepType.START,
-          image: `${URL}/card-school.svg`,
+          image: `${URL}/Tax-pana.svg`,
           title: 'Get your Notice of Assessment(NOA).',
           description: `Few clicks away to get your NOA`,
         },

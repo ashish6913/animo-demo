@@ -37,7 +37,7 @@ process.on('unhandledRejection', (error) => {
 const run = async () => {
   const endpoint = process.env.AGENT_ENDPOINT ?? (await connect({
     addr: 5001,
-    authtoken: '2QZFaJGOLEMI9CzF7RunVQawOLm_6r6dUCBhDm2obLtxVTBaK'
+    authtoken: '1mdXuzNL2LsrDAX6nJprQPLc2VJ_5LARmZLWkomGf38G51jY5'
   }))
   const agentConfig: InitConfig = {
     label: 'CRA',
@@ -59,7 +59,7 @@ const run = async () => {
     autoAcceptCredentials: AutoAcceptCredential.ContentApproved,
     autoAcceptProofs: AutoAcceptProof.ContentApproved,
     useLegacyDidSovPrefix: true,
-    connectionImageUrl: 'https://i.imgur.com/g3abcCO.png',
+    connectionImageUrl: 'https://lespromenades.com/wp-content/uploads/2021/09/0822cab22c9104aa8468e7985463d1fa9ab2f1eb-1.png'
   }
 
   const agent = new Agent(agentConfig, agentDependencies)

@@ -13,13 +13,13 @@ export const Student: Character = {
     {
       id: uuid(),
       name: 'CRA ID Card',
-      icon: '/public/student/icon-student.svg',
+      icon: '/public/cra-id.svg',
       attributes: [
         { name: 'Name', value: 'Jan van Dalen' },
-        { name: 'Date of birth', value: '101' },
-        { name: 'Street', value: 'Ambachtstraat 61' },
-        { name: 'City', value: 'Utrecht' },
-        { name: 'Nationality', value: 'The Netherlands' },
+        { name: 'Date of birth', value: '19950210' },
+        { name: 'Street', value: '875 Heron Road' },
+        { name: 'City', value: 'Ottawa' },
+        { name: 'Nationality', value: 'Canada' },
       ],
     },
   ],
